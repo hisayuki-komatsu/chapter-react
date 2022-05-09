@@ -5,6 +5,7 @@ import { Home } from '../components/home'
 import { Page1 } from '../components/page1'
 import { Page2 } from '../components/page2'
 import { page1Routes } from './page1-route'
+import { page2Routes } from './page2-route'
 
 export const Router = () => {
   return (
@@ -27,9 +28,21 @@ export const Router = () => {
           </Switch>
         )}
       />
-      <Route exact path="/page2">
+      <Route
+        path="/page2"
+        render={({ match: { url } }) => (
+          <Switch>
+            {page2Routes.map((route) => (
+              <Route exact={route.exact} path={`${url}${route.path}`}>
+                {route.children}
+              </Route>
+            ))}
+          </Switch>
+        )}
+      ></Route>
+      {/* <Route exact path="/page2">
         <Page2 />
-      </Route>
+      </Route> */}
     </Switch>
   )
 }
