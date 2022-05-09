@@ -4,6 +4,7 @@ import { DetailB } from '../components/detailB'
 import { Home } from '../components/home'
 import { Page1 } from '../components/page1'
 import { Page2 } from '../components/page2'
+import { Page404 } from '../components/page404'
 import { page1Routes } from './page1-route'
 import { page2Routes } from './page2-route'
 
@@ -43,6 +44,9 @@ export const Router = () => {
       {/* <Route exact path="/page2">
         <Page2 />
       </Route> */}
+      <Route path="*">
+        <Page404 />
+      </Route>
     </Switch>
   )
 }

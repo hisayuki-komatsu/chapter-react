@@ -1,7 +1,7 @@
 import { Link, useHistory } from 'react-router-dom'
 
 export const Page1 = () => {
-  const state = 'Page1だよ'
+  const state = 'Page1 Component'
   const history = useHistory()
 
   const onClickDetailB = () => history.push('/page1/detailB')
