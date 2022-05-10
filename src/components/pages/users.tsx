@@ -16,7 +16,7 @@ const user: User = {
 
 const users: User[] = [...Array(10)].map((_, i) => ({
   ...user,
-  name: `${user.name}-${i + 1}`,
+  name: `${user.name}${i + 1}`,
 }))
 
 export const Users = () => {
@@ -26,7 +26,7 @@ export const Users = () => {
       <SearchInput></SearchInput>
       <div className={styles.contentArea}>
         {users.map((user) => (
-          <UserCard user={user} />
+          <UserCard key={user.name} user={user} />
         ))}
       </div>
     </div>

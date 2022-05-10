@@ -1,9 +1,12 @@
+import React, { memo, useContext } from 'react'
+import { UserContext } from '../../../providers/user-provider'
 import { User } from '../../../types'
 import { Card } from '../../atoms/card/card'
 import styles from './user-card.module.scss'
 
-export const UserCard = (props: { user: User }) => {
+export const UserCard = memo((props: { user: User }) => {
   const { user } = props
+  const { userInfo } = useContext(UserContext) as any
   return (
     <Card>
       <div className={styles.topContainer}>
@@ -22,4 +25,4 @@ export const UserCard = (props: { user: User }) => {
       </dl>
     </Card>
   )
-}
+})

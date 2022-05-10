@@ -1,8 +1,13 @@
 import './App.css'
+import { UserProvider } from './providers/user-provider'
 import { Router } from './router/router'
 
 const App = () => {
-  return <Router />
+  return (
+    <UserProvider>
+      <Router />
+    </UserProvider>
+  )
 }
 
 export default App
