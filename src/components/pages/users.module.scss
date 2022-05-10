@@ -1,0 +1,13 @@
+.container {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .contentArea {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    padding: 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

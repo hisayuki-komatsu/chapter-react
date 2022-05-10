@@ -1,32 +1,8 @@
-import { useCallback, useState } from 'react'
 import './App.css'
-import { BrowserRouter, Link } from 'react-router-dom'
 import { Router } from './router/router'
-import { SearchInput } from './components/molecules/search-input'
-import { UserCard } from './components/organisms/user/user-card'
-import { User } from './types'
-import { Layout } from './components/templetes/default-layout'
-
-const user: User = {
-  name: 'hisa',
-  image: 'https://source.unsplash.com/MRE-sf3i3PQ',
-  email: 'example@gmail.com',
-  phone: '080-8888-8888',
-  company: {
-    name: 'google',
-  },
-  website: 'https://google.com',
-}
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Layout>
-        <SearchInput></SearchInput>
-        <UserCard user={user} />
-      </Layout>
-    </BrowserRouter>
-  )
+  return <Router />
 }
 
 export default App
