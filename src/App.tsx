@@ -3,11 +3,12 @@ import './App.css'
 import { BrowserRouter, Link } from 'react-router-dom'
 import { Router } from './router/router'
 import { PrimaryButton } from './components/atoms/buttons/primary-button'
+import { SearchInput } from './components/molecules/search-input'
 
 const App = () => {
   return (
     <div className="app">
-      <PrimaryButton>test</PrimaryButton>
+      <SearchInput></SearchInput>
     </div>
   )
 }
