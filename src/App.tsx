@@ -2,13 +2,26 @@ import { useCallback, useState } from 'react'
 import './App.css'
 import { BrowserRouter, Link } from 'react-router-dom'
 import { Router } from './router/router'
-import { PrimaryButton } from './components/atoms/buttons/primary-button'
 import { SearchInput } from './components/molecules/search-input'
+import { UserCard } from './components/organisms/user/user-card'
+import { User } from './types'
+
+const user: User = {
+  name: 'hisa',
+  image: 'https://source.unsplash.com/MRE-sf3i3PQ',
+  email: 'example@gmail.com',
+  phone: '080-8888-8888',
+  company: {
+    name: 'google',
+  },
+  website: 'https://google.com',
+}
 
 const App = () => {
   return (
     <div className="app">
       <SearchInput></SearchInput>
+      <UserCard user={user} />
     </div>
   )
 }
