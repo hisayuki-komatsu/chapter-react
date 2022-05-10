@@ -5,6 +5,7 @@ import { Router } from './router/router'
 import { SearchInput } from './components/molecules/search-input'
 import { UserCard } from './components/organisms/user/user-card'
 import { User } from './types'
+import { Layout } from './components/templetes/default-layout'
 
 const user: User = {
   name: 'hisa',
@@ -19,10 +20,12 @@ const user: User = {
 
 const App = () => {
   return (
-    <div className="app">
-      <SearchInput></SearchInput>
-      <UserCard user={user} />
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <SearchInput></SearchInput>
+        <UserCard user={user} />
+      </Layout>
+    </BrowserRouter>
   )
 }
 

@@ -1,0 +1,14 @@
+.header {
+  padding: 8px 0;
+  color: #fff;
+  text-align: center;
+  background-color: #11999e;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 8px;
+      list-style: none;
+    }
+  }
+}
