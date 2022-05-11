@@ -18,7 +18,7 @@ export const Top = () => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>TOPページ</h2>
       <PrimaryButton onClick={onClickAdmin}>管理者ユーザー</PrimaryButton>
       <br />
