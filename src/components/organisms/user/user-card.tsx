@@ -1,4 +1,4 @@
-import React, { memo, useContext } from 'react'
+import { memo, useContext } from 'react'
 import { UserContext } from '../../../providers/user-provider'
 import { User } from '../../../types'
 import { Card } from '../../atoms/card/card'
