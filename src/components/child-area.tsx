@@ -1,9 +1,5 @@
 import { memo } from 'react'
 
-type ChildArea = {
-  open: any
-}
-
 export const ChildArea = memo((props: any) => {
   const { open, onClickClose } = props
   console.log('start rendaling')
