@@ -2,27 +2,10 @@ import axios from 'axios'
 import { useState } from 'react'
 import { User } from '../../types/api/user'
 import { UserProfile } from '../../types/user'
-// import { User } from '../../types'
 import { SearchInput } from '../molecules/search-input'
 import { NewUserCard } from '../new-user-card/new-user-card'
 import { UserCard } from '../organisms/user/user-card'
 import styles from './users.module.scss'
-
-// const user: User = {
-//   name: 'hisa',
-//   image: 'https://source.unsplash.com/MRE-sf3i3PQ',
-//   email: 'example@gmail.com',
-//   phone: '080-8888-8888',
-//   company: {
-//     name: 'google',
-//   },
-//   website: 'https://google.com',
-// }
-
-// const users: User[] = [...Array(10)].map((_, i) => ({
-//   ...user,
-//   name: `${user.name}${i + 1}`,
-// }))
 
 export const Users = () => {
   const [userProfiles, setUserProfiles] = useState<Array<UserProfile>>([])
