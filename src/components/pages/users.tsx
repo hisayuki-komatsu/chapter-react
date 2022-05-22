@@ -1,38 +1,12 @@
-import axios from 'axios'
-import { useState } from 'react'
-import { User } from '../../types/api/user'
-import { UserProfile } from '../../types/user'
+import { useAllUsers } from '../../hooks/use-all-users'
 import { SearchInput } from '../molecules/search-input'
 import { NewUserCard } from '../new-user-card/new-user-card'
-import { UserCard } from '../organisms/user/user-card'
 import styles from './users.module.scss'
 
 export const Users = () => {
-  const [userProfiles, setUserProfiles] = useState<Array<UserProfile>>([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
+  const { getUsers, userProfiles, loading, error } = useAllUsers()
 
-  const onClickFetchUser = () => {
-    setLoading(true)
-    setError(false)
-    axios
-      .get<Array<User>>('https://jsonplaceholder.typicode.com/users')
-      .then((res) => {
-        const data = res.data.map((user) => ({
-          id: user.id,
-          name: `${user.name}(${user.username})`,
-          email: user.email,
-          address: `${user.address.city}${user.address.suite}${user.address.street}`,
-        }))
-        setUserProfiles(data)
-      })
-      .catch(() => {
-        setError(true)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-  }
+  const onClickFetchUser = () => getUsers()
   return (
     <div className={styles.container}>
       <h2>Usersページです</h2>
