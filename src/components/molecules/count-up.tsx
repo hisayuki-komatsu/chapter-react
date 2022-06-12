@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const CountUp = () => {
   const [count, setCount] = useState(0)
 
   const countUp = () => setCount((prevState) => prevState + 1)
   const countDownn = () => setCount((prevState) => prevState - 1)
+
+  useEffect(() => console.log(`this count is ${count}`))
 
   return (
     <div>
