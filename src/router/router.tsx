@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Main } from '../components/pages/main'
 import { Top } from '../components/pages/top'
 import { Users } from '../components/pages/users'
 import { Layout } from '../components/templetes/default-layout'
@@ -9,12 +10,7 @@ export const Router = () => {
       <Switch>
         <Route exact path="/">
           <Layout>
-            <Top />
-          </Layout>
-        </Route>
-        <Route path="/users">
-          <Layout>
-            <Users />
+            <Main />
           </Layout>
         </Route>
       </Switch>
