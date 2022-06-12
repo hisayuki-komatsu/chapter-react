@@ -21,3 +21,23 @@ export const Router = () => {
     </BrowserRouter>
   )
 }
+
+// ----------------  user管理 app  ----------------
+// export const Router = () => {
+//   return (
+//     <BrowserRouter>
+//       <Switch>
+//         <Route exact path="/">
+//           <Layout>
+//             <Top />
+//           </Layout>
+//         </Route>
+//         <Route path="/users">
+//           <Layout>
+//             <Users />
+//           </Layout>
+//         </Route>
+//       </Switch>
+//     </BrowserRouter>
+//   )
+// }
